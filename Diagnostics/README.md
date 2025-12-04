@@ -52,8 +52,21 @@ This script is designed to rapidly diagnose and proactively address common cause
 |---|---|
 | Script Title | Fix-NetworkConnectivity.bat |
 | Description | This script executes a full, low-level reset and repair of the Windows networking stack (TCP/IP, Winsock, IPv4/v6) to resolve common connectivity issues such as limited connectivity, slow speeds, inability to resolve DNS, and DHCP failures. It is a crucial one-click tool for Level 1/2 network troubleshooting. |
-| Key Features & Commands | * IP Reset: Runs ipconfig /release and ipconfig /renew to get a fresh DHCP lease. * DNS Flush: Clears the local DNS cache (ipconfig /flushdns). * Winsock/IP Reset: Resets the Winsock Catalog and TCP/IP stack (netsh winsock reset, netsh int ip reset), which resolves many corrupted protocol issues. * Full Network Interface Reset: Runs multiple netsh commands (ipv4 reset, ipv6 reset, tcp reset) to reset all related network configurations. |
-| Technical Support Value & Impact | * Efficiency: Replaces a long, error-prone list of manual commands, standardizing the network repair process. * Speed: Quickly addresses the core of most network issues caused by temporary software corruption. |
+| Key Features & Commands | ***IP Reset:** Runs ipconfig /release and ipconfig /renew to get a fresh DHCP lease. ***DNS Flush:** Clears the local DNS cache (ipconfig /flushdns). ***Winsock/IP Reset:** Resets the Winsock Catalog and TCP/IP stack (netsh winsock reset, netsh int ip reset), which resolves many corrupted protocol issues. ***Full Network Interface Reset:** Runs multiple netsh commands (ipv4 reset, ipv6 reset, tcp reset) to reset all related network configurations. |
+| Technical Support Value & Impact | ***Efficiency:** Replaces a long, error-prone list of manual commands, standardizing the network repair process. ***Speed:** Quickly addresses the core of most network issues caused by temporary software corruption. |
 | How to Run | Prerequisite: Must be run with Administrator privileges. Execute the script: .\Fix-NetworkConnectivity.bat |
+
+******************************************************************************************************
+
+
+# Script: Get-GlobalTime.bat
+
+| Section | Content |
+|---|---|
+| Script Title | Get-GlobalTime.bat |
+| Description | This interactive command-line utility provides instant, accurate time and date information for 14 major global cities and regions. It is an essential tool for Technical Support Engineers who need to coordinate with international clients, schedule calls, or determine remote user availability across various time zones. |
+| Key Features & Commands | ***Interactive Menu:** Uses Batch scripting's GOTO and SET /P to provide a simple, numbered interface. ***Accurate Time Calculation:** Leverages the PowerShell Get-Date -TimeZone cmdlet to ensure correct time calculation, including automatic handling of Daylight Saving Time (DST) for each region. ***Hybrid Scripting:** Demonstrates proficiency in embedding advanced PowerShell functionality within traditional Batch files. |
+| Technical Support Value & Impact | ***Coordination:** Eliminates reliance on web browsers for simple time checks, improving workflow during urgent international support operations. ***Professionalism:** Ensures communication with global clients is always timely and accurate. |
+| How to Run | Execute the script: .\Get-GlobalTime.bat. No Admin rights required. Follow the on-screen menu instructions. |
 
 ******************************************************************************************************
