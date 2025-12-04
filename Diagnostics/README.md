@@ -44,3 +44,16 @@ This script is designed to rapidly diagnose and proactively address common cause
 | How to Run | Prerequisite: Must be run with Administrator privileges. Execute the script: .\Repair-AudioTroubleshooter.bat |
 
 ******************************************************************************************************
+
+
+# Script: Fix-NetworkConnectivity.bat
+
+| Section | Content |
+|---|---|
+| Script Title | Fix-NetworkConnectivity.bat |
+| Description | This script executes a full, low-level reset and repair of the Windows networking stack (TCP/IP, Winsock, IPv4/v6) to resolve common connectivity issues such as limited connectivity, slow speeds, inability to resolve DNS, and DHCP failures. It is a crucial one-click tool for Level 1/2 network troubleshooting. |
+| Key Features & Commands | * IP Reset: Runs ipconfig /release and ipconfig /renew to get a fresh DHCP lease. * DNS Flush: Clears the local DNS cache (ipconfig /flushdns). * Winsock/IP Reset: Resets the Winsock Catalog and TCP/IP stack (netsh winsock reset, netsh int ip reset), which resolves many corrupted protocol issues. * Full Network Interface Reset: Runs multiple netsh commands (ipv4 reset, ipv6 reset, tcp reset) to reset all related network configurations. |
+| Technical Support Value & Impact | * Efficiency: Replaces a long, error-prone list of manual commands, standardizing the network repair process. * Speed: Quickly addresses the core of most network issues caused by temporary software corruption. |
+| How to Run | Prerequisite: Must be run with Administrator privileges. Execute the script: .\Fix-NetworkConnectivity.bat |
+
+******************************************************************************************************
