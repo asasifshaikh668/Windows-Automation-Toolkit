@@ -1,4 +1,4 @@
-**Script: Invoke-SystemDiagnostics.bat**
+# Script: Invoke-SystemDiagnostics.bat
 
 This script is designed to rapidly diagnose and proactively address common causes of Windows system slowness in a single execution. It significantly reduces the time spent manually collecting performance data and running standard maintenance tasks during a support ticket lifecycle.
 
@@ -28,3 +28,19 @@ This script is designed to rapidly diagnose and proactively address common cause
    ```.\Invoke-SystemDiagnostics.bat```
    
 *Note: Script execution may take several minutes due to comprehensive tasks like CHKDSK and SFC.*
+
+
+******************************************************************************************************
+
+
+# Script: Repair-AudioTroubleshooter.bat
+
+| Section | Content |
+|---|---|
+| Script Title | Repair-AudioTroubleshooter.bat |
+| Description | This script provides a one-click solution for diagnosing and fixing common Windows audio playback and recording problems, often eliminating the need for manual service restarts and driver re-enabling. It integrates built-in Windows troubleshooters with backend service controls and device manipulation. |
+| Key Features & Commands | * Built-in Troubleshooting: Executes both the Audio Playback and Audio Recording diagnostics (msdt.exe). * Service Reset: Stops and restarts the core Windows Audio service (Audiosrv). * Device Cycling: Uses PowerShell to identify audio devices in an 'Error' state and automatically disables and re-enables them (a simulated hardware reset). * DLL Repair (Added): Re-registers audiosrv.dll and audiocore.dll to ensure core system files are correctly registered. |
+| Technical Support Value & Impact | * Time Reduction: Automates a 5-step manual process into a single execution, saving 5-10 minutes per ticket. * High Success Rate: Addresses the top three causes of audio failure (corrupt services, disabled devices, and software errors) simultaneously. |
+| How to Run | Prerequisite: Must be run with Administrator privileges. Execute the script: .\Repair-AudioTroubleshooter.bat |
+
+******************************************************************************************************
