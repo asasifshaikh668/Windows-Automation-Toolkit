@@ -30,3 +30,13 @@ This module contains a set of PowerShell scripts designed for proactive technica
 
 ----------------------------------------------------------------------------------------------------------
 
+# Get-BatteryHealth.ps1 (Detailed Battery Health Report)
+
+| Feature | Description |
+|---|---|
+| Script Title | Get-BatteryHealth.ps1 |
+| Wear Level Calculation | Calculates the **Health Percentage** by comparing the current Full Charge Capacity to the Design Capacity using WMI data. |
+| Current Status | Displays the immediate status, including Estimated Charge Remaining (%) and Battery Status (Charging/Discharging). |
+| HTML Report Integration | Automatically executes the powercfg /batteryreport command and saves the full historical report to the user's %TEMP% directory. |
+| Technical Support Value & Impact | Engineers can quickly quantify battery degradation to justify a replacement, instead of relying on subjective user reports. |
+| How to Run | Run the script: .\Get-BatteryHealth.ps1. Admin rights is required to run the cript. |
