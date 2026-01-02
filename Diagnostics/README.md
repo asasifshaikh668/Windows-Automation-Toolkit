@@ -107,3 +107,13 @@ This script is designed to rapidly diagnose and proactively address common cause
 
 ********************************************************************************************************
 
+# Script: Reset-PrintSpooler.ps1 / .bat
+
+| Section | Content |
+|---|---|
+| Script Title | Reset-PrintSpooler.ps1 / .bat |
+| Description | This utility provides a one-click solution to resolve common printing issues on Windows systems. It identifies and clears stuck print jobs by resetting the local Print Spooler service and purging its temporary cache folder. |
+| Features | ***Service Management:** Automatically stops and restarts the spooler service to release file locks. ***Cache Cleanup:** ermanently deletes all temporary .shd and .spl files located in the System32\spool\PRINTERS directory.  ***Multi-Format Support:** Available in both PowerShell and Batch formats for flexible deployment. |
+| Usage Instructions | 1. Locate the script file (either .ps1 or .bat). 2. **Important:** You must run the script with **Administrator privileges** to modify system services. 3. Execute the file and wait for the confirmation that the spooler has restarted. |
+
+**********************************************************************************************************
