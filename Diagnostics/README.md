@@ -96,3 +96,14 @@ This script is designed to rapidly diagnose and proactively address common cause
 
 ********************************************************************************************************
 
+# Script: Test-RemoteConnectivity.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Test-RemoteConnectivity.ps1 |
+| Description | This script provides a streamlined way to verify network reachability and essential service availability on a target machine. It serves as a handy template for routine network administration tasks. It prompts the user for a hostname or IP address and performs a sequential test of ICMP ping and common TCP ports used in enterprise environments. |
+| Features | ***Interactive Prompts:** Easily input the target destination during execution. ***Multi-Port Verification:** Automatically checks for: ***Ping:** Basic ICMP reachability. ***Web:** HTTP (80) and HTTPS (443) connectivity. ***Remote Desktop** RDP (3389) availability.  ***Standardized Output:** Displays results in a clean, readable table format. |
+| Usage Instructions | 1. Open PowerShell with appropriate permissions. 2. Navigate to the script directory and run: .\Test-RemoteConnectivity.ps1 3. Enter the **Hostname** or **IP Address** when prompted. |
+
+********************************************************************************************************
+
