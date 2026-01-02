@@ -84,3 +84,15 @@ This script is designed to rapidly diagnose and proactively address common cause
 
 
 ******************************************************************************************************
+
+# Script: Get-RecentEventErrors.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Get-RecentEventErrors.ps1 |
+| Description | This script is a diagnostic tool designed for Senior Digital IT Engineers to maintain system health and security. It automates the retrieval of high-priority logs, specifically targeting the last 50 Critical and Error events from both System and Application logs within a 24-hour window. This proactive approach helps in identifying hardware health issues and software conflicts before they escalate into global support outages. |
+| Features | ***Proactive Diagnostics:** Quickly identifies system-level failures and application crashes. ***Searchable Technical Skills:** Demonstrates advanced use of PowerShell for infrastructure monitoring and tooling automation. ***Operational Efficiency:** Reduces manual log checking, allowing engineers to focus on high-value remediation tasks. |
+| Usage | 1. Run PowerShell as Administrator. 2. Execute the script: .\Get-RecentEventErrors.ps1 3. The output provides a structured table of recent critical incidents for rapid analysis |
+
+********************************************************************************************************
+
