@@ -117,3 +117,14 @@ This script is designed to rapidly diagnose and proactively address common cause
 | Usage Instructions | 1. Locate the script file (either .ps1 or .bat). 2. **Important:** You must run the script with **Administrator privileges** to modify system services. 3. Execute the file and wait for the confirmation that the spooler has restarted. |
 
 **********************************************************************************************************
+
+# Script: Get-DiskSpaceAlert.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Get-DiskSpaceAlert.ps1 |
+| Description | This script is a proactive monitoring tool designed to check available disk space on Windows devices. It identifies if a specific drive, such as the C: drive, has fallen below a predefined storage threshold. By providing early warnings, it helps administrators prevent system performance issues caused by insufficient disk capacity. |
+| Features | ***Storage Monitoring:** Retrieves real-time free and used disk space data for targeted volumes. ***Threshold Alerts:** Compares available space against a required amount to determine if enough storage exists.  ***Automated Reporting:** Can be executed via central management consoles or local scripts to monitor multiple endpoints. |
+| Usage Instructions | 1. Download and save the script (e.g., to C:\scripts\Get-DiskSpaceAlert.ps1). 2. Open PowerShell as an Administrator. 3. Run the script to view the current disk status. 4. The output will display the disk size and free space in GB for easy readability. |
+
+**********************************************************************************************************
