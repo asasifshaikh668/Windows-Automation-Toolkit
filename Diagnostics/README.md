@@ -114,7 +114,7 @@ This script is designed to rapidly diagnose and proactively address common cause
 | Script Title | Reset-PrintSpooler.ps1 / .bat |
 | Description | This utility provides a one-click solution to resolve common printing issues on Windows systems. It identifies and clears stuck print jobs by resetting the local Print Spooler service and purging its temporary cache folder. |
 | Features | ***Service Management:** Automatically stops and restarts the spooler service to release file locks. ***Cache Cleanup:** ermanently deletes all temporary .shd and .spl files located in the System32\spool\PRINTERS directory.  ***Multi-Format Support:** Available in both PowerShell and Batch formats for flexible deployment. |
-| Usage Instructions | 1. Locate the script file (either .ps1 or .bat). 2. **Important:** You must run the script with **Administrator privileges** to modify system services. 3. Execute the file and wait for the confirmation that the spooler has restarted. |
+| Usage Instructions | **1.** Locate the script file (either .ps1 or .bat). **2.** **Important:** You must run the script with **Administrator privileges** to modify system services. **3.** Execute the file and wait for the confirmation that the spooler has restarted. |
 
 **********************************************************************************************************
 
@@ -125,7 +125,7 @@ This script is designed to rapidly diagnose and proactively address common cause
 | Script Title | Get-DiskSpaceAlert.ps1 |
 | Description | This script is a proactive monitoring tool designed to check available disk space on Windows devices. It identifies if a specific drive, such as the C: drive, has fallen below a predefined storage threshold. By providing early warnings, it helps administrators prevent system performance issues caused by insufficient disk capacity. |
 | Features | ***Storage Monitoring:** Retrieves real-time free and used disk space data for targeted volumes. ***Threshold Alerts:** Compares available space against a required amount to determine if enough storage exists.  ***Automated Reporting:** Can be executed via central management consoles or local scripts to monitor multiple endpoints. |
-| Usage Instructions | 1. Download and save the script (e.g., to C:\scripts\Get-DiskSpaceAlert.ps1). 2. Open PowerShell as an Administrator. 3. Run the script to view the current disk status. 4. The output will display the disk size and free space in GB for easy readability. |
+| Usage Instructions | **1.** Download and save the script (e.g., to C:\scripts\Get-DiskSpaceAlert.ps1). **2.** Open PowerShell as an Administrator. **3.** Run the script to view the current disk status. **4.** The output will display the disk size and free space in GB for easy readability. |
 
 **********************************************************************************************************
 
@@ -136,6 +136,17 @@ This script is designed to rapidly diagnose and proactively address common cause
 | Script Title | Analyze-StartupTime.ps1 |
 | Description | This diagnostic script queries the Windows Event Log to retrieve historical startup and shutdown data. It is essential for calculating system downtime and identifying if reboots were intentional or caused by system crashes. |
 | Features | ***Startup Tracking:** Identifies when the Event Log service started (Event ID 6005). ***Shutdown Analysis:** Differentiates between clean shutdowns (6006) and unexpected power losses (6008).  ***Performance Insight:** Helps track downtime duration between boot and shutdown events. |
-| Usage Instructions | 1. Run PowerShell as Administrator. 2. Execute: .\Analyze-StartupTime.ps1|
+| Usage Instructions | **1.** Run PowerShell as Administrator. **2.** Execute: _.\Analyze-StartupTime.ps1_|
+
+**********************************************************************************************************
+
+# Script: Get-AllUserLoginHistory.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Get-AllUserLoginHistory.ps1 |
+| Description | This PowerShell script serves as a comprehensive system audit tool. Unlike single-user queries, this script scans the Windows Security Event Log to retrieve and display recent login activity for all user accounts on the system. It is designed to help administrators spot irregular patterns, such as failed login attempts across multiple accounts or unauthorized access by system service accounts. |
+| Features | ***System-Wide Monitoring:** Automatically captures login events for every user, including local admins, domain users, and service accounts. ***Dynamic Parsing:** Intelligently extracts the "Target User Name" from event properties, removing the need for manual input.  ***Status Classification:** Clearly categorizes events as Success (Event ID 4624) or FAILED (Event ID 4625) for immediate analysis. |
+| Usage Instructions | **1. Run as Administrator:** This script requires elevated permissions to read the Security Event Log. **2.** Execute the script: _.\Get-AllUserLoginHistory.ps1_ **3.** (Optional) Specify the number of events to retrieve: _.\Get-AllUserLoginHistory.ps1 -MaxEvents 100_|
 
 **********************************************************************************************************
