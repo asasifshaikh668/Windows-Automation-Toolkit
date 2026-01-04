@@ -184,3 +184,15 @@ This script is designed to rapidly diagnose and proactively address common cause
 
 **********************************************************************************************************
 
+# Script: Check-SystemRestorePoints.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Check-SystemRestorePoints.ps1 |
+| Description | This PowerShell utility provides a comprehensive health check for Windows System Restore. It goes beyond the basic GUI by listing all available restore points, revealing their specific creation times, and analyzing the actual disk space consumed by the Volume **Shadow Copy** service. This is critical for IT admins troubleshooting "missing" hard drive space or verifying backup retention policies. |
+| Features | ***Detailed Inventory:** Lists all active restore points with their **Sequence Numbers** (needed for restoration) and precise **Creation timestamps**  ***Storage Analysis:** Queries the `Win32_ShadowStorage` class to report exactly how much disk space (in GB) is currently used vs. allocated for backups  ***Technical Location:** Exposes the hidden "Device Object" paths (e.g., ```\Device\HarddiskVolumeShadowCopy1```) where the data physically resides. |
+| Usage Instructions | **1.** **Run as Administrator:** This script requires elevated privileges to query WMI shadow storage classes. **2.** Execute the script: ```.\Check-SystemRestorePoints.ps1``` **3.** **Interpret Results:** ***User View:** Confirm the "Description" matches your recent updates or installations. ***System View:** Check "Used Space (GB)" to ensure backups aren't consuming too much disk capacity. |
+
+**********************************************************************************************************
+
+
