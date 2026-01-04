@@ -1,3 +1,10 @@
+# 🔍 Diagnostic
+
+Contains scripts focused on general system analysis, error logging, and troubleshooting.
+
+    Includes 15+ scripts for verifying system health, network connectivity, and resource usage
+
+
 # Script: Invoke-SystemDiagnostics.bat
 
 This script is designed to rapidly diagnose and proactively address common causes of Windows system slowness in a single execution. It significantly reduces the time spent manually collecting performance data and running standard maintenance tasks during a support ticket lifecycle.
