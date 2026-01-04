@@ -173,3 +173,14 @@ This script is designed to rapidly diagnose and proactively address common cause
 
 **********************************************************************************************************
 
+# Script: Restart-StoppedServices.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Restart-StoppedServices.ps1 |
+| Description | This PowerShell script is an interactive diagnostic tool designed to monitor and repair critical Windows services (e.g., Print Spooler, Windows Update). Instead of automatically forcing restarts, it identifies services that are **Stopped** or **Stuck** (e.g., "StopPending") and asks for your permission before taking action. |
+| Features | ***Safety First:** Uses an interactive `Read-Host` prompt to ensure no services are modified without explicit user consent.  ***State Detection:** Smartly ignores healthy ("Running") services and only targets those in failed or transitional states.  ***Feedback Loop:** Provides immediate success/failure confirmation after attempting a restart. |
+| Usage Instructions | **1.** Open PowerShell as **Administrator** (required to control services). **2.** Run the script: ```.\Restart-StoppedServices.ps1``` **3.** If a service is found stopped, type Y to start it or N to skip. |
+
+**********************************************************************************************************
+
