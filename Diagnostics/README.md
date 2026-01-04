@@ -150,3 +150,15 @@ This script is designed to rapidly diagnose and proactively address common cause
 | Usage Instructions | **1. Run as Administrator:** This script requires elevated permissions to read the Security Event Log. **2.** Execute the script: _.\Get-AllUserLoginHistory.ps1_ **3.** (Optional) Specify the number of events to retrieve: _.\Get-AllUserLoginHistory.ps1 -MaxEvents 100_|
 
 **********************************************************************************************************
+
+# Script: Repair-WINSOCK-Catalog.ps1
+
+| Section | Content |
+|---|---|
+| Script Title | Repair-WINSOCK-Catalog.ps1 |
+| Description | This utility script fixes common network connectivity issues (such as "No Internet Access" or socket errors) by resetting the Windows Sockets (Winsock) Catalog and the TCP/IP stack to their default clean state. |
+| Features | ***Full Stack Reset:** Executes both `netsh winsock reset` and `netsh int ip reset`. ***Admin Check:** automatically validates that the script is running with elevated privileges.  ***Reboot Prompt:** Offers an immediate restart option to finalize the repair. |
+| Usage Instructions | **1.** Open PowerShell as **Administrator**. **2.** Run the script: _.\Repair-WINSOCK-Catalog.ps1_ **3.** Type **Y** and press Enter to reboot your computer.|
+
+**********************************************************************************************************
+
